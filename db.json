@@ -1,0 +1,9 @@
+{
+  "employees": [
+    { "id": 1, "name": "Allan", "last_name": "Poe", "email": "allan_poe_09@email.com", "phone": "4435679083" },
+    { "id": 2, "name": "Clive S.", "last_name": "Lewis", "email": "cs_lewis_98@email.com", "phone": "4437094524" },
+    { "id": 3, "name": "JK", "last_name": "Rowling", "email": "jk_rowling_65@email.com", "phone": "4436122456" },
+    { "id": 4, "name": "Cassandra", "last_name": "Clare", "email": "cassandra_clare_73@email.com", "phone": "4437972345" },
+    { "id": 5, "name": "Stephen", "last_name": "King", "email": "stephen_king_47@email.com", "phone": "4438996523" }
+  ]
+}
