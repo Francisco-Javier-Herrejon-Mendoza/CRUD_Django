@@ -1,22 +1,21 @@
 from django.shortcuts import render
-from .models import Empleado
+from .models import Empleado, Bandera
 from .forms import EmpleadoForms, EmpleadoUpdateForms
 from django.http.response import HttpResponse, HttpResponseRedirect
 from django.db.models import Q
 import json
 
-bandera = True
 empleado_buscado = ''
 
 # Create your views here.
 
 def home(request):
-    global bandera
+    bandera = Bandera.objects.get(idBandera = 1)
     global empleado_buscado
-
-    if bandera:
-        #cargarJSON()
-        bandera = False
+    print(bandera.valor)
+    if bandera.valor == 0:
+        cargarJSON()
+        bandera = Bandera.objects.filter(idBandera = 1).update(valor = 1)
 
     if request.method == "POST" and "buscar" in request.POST:
         busqueda = request.POST.get("buscar","")
