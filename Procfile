@@ -1,0 +1,1 @@
+web: gunicorn CRUD_Django.wsgi --log-file -
