@@ -15,3 +15,15 @@ class Empleado(models.Model):
     class Meta:
         managed = True
         db_table = 'empleado'
+
+class Bandera(models.Model):
+    idBandera = models.AutoField(primary_key=True)
+    valor = models.IntegerField(blank=True, null=True)
+    nombre = models.CharField(max_length=150, blank=True, null=True)
+
+    def __str__(self):
+        return str(self.valor)
+
+    class Meta:
+        managed = True
+        db_table = 'bandera'
