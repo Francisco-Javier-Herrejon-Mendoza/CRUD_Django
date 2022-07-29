@@ -12,7 +12,7 @@ empleado_buscado = ''
 def home(request):
     bandera = Bandera.objects.get(idBandera = 1)
     global empleado_buscado
-    print(bandera.valor)
+    
     if bandera.valor == 0:
         cargarJSON()
         bandera = Bandera.objects.filter(idBandera = 1).update(valor = 1)
